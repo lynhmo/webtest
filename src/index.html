@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOTSTORE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css"> 
+    <link rel="stylesheet" href="./assets/css/main.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy ="no-referrer" />
+</head>
+<body>
+    <header>
+        <header class="header__intro">
+                <ul class="header__intro--information">
+                    <li class="header__intro--item header__intro--benefit">
+                        <i class="fas fa-shipping-fast"></i>
+                        FREE SHIPPING & RETURN</li>
+                    </li>
+                    <li class="header__intro--item header__intro--benefit">
+                        <i class="fas fa-headset"></i>
+                        ONLINE SUPPORT 24/7</li>
+                    </li>
+                    <li class="header__intro--item header__intro--benefit">
+                        <i class="fas fa-check-circle"></i>
+                        PRESTIGE AND QUALITY</li>
+                    </li>
+                </ul>
+                <ul class="header__intro--information">
+                    <li class="header__intro--item">
+                        <i class="header__intro--socialnetworkicon fab fa-facebook-f"></i>
+                    </li>
+                    <li class="header__intro--item">
+                        <i class="header__intro--socialnetworkicon fab fa-instagram"></i>
+                    </li>
+                    <li class="header__intro--item">
+                        <i class="header__intro--socialnetworkicon fab fa-twitter"></i>
+                    </li>
+                </ul>
+        </header>
+        <header class="header__second">
+                <div class="header__second--item header__second--logo">
+                    <img src="./assets/img/abc111.png" alt="LOGO" id="LOGO">
+                </div>
+                <div class="header__second--item header__second--search">
+                    <input type="text" placeholder="Tìm Kiếm" name="" id="search">
+                    <i class="header__second--icon fa-solid fa-magnifying-glass"></i>
+                </div>
+                <!-- <div class="header__second--item header__second--login"> -->
+                    <ul class="header__second--item" id="Login">
+                        <li class="header__second--login">
+                            <i class="header__second--icon fas fa-user-circle"></i> <br>
+                            <span class="header__second--logintxt">Đăng Nhập</span> 
+                        </li>
+                        <li class="header__second--login">
+                            <i class="header__second--icon fas fa-user-plus"></i> <br>
+                            <span class="header__second--logintxt">Đăng Ký</span>
+                        </li>
+                    </ul>
+                <!-- </div> -->
+                <div class="header__second--item header__second--cart">
+                    <i class="header__second--icon fa-solid fa-cart-shopping"></i>
+                </div>
+        </header>
+        <!-- <ul class="header__menu">
+            <li class="header__menu--item">Trang chủ</li>
+            <li class="header__menu--item">Giới thiệu</li>
+            <li class="header__menu--item">Blog</li>
+            <li class="header__menu--item">Liên hệ</li>
+            <li class="header__menu--item">QR CODE</li>
+        </ul> -->
+        <div class="header__menu">
+            <a href="trangchu.com" class="header__menu--item">Trang chủ</a>
+            <a href="" class="header__menu--item">Giới thiệu</a>
+            <a href="" class="header__menu--item">Blog</a>
+            <a href="" class="header__menu--item">Liên hệ</a>
+            <a href="" class="header__menu--item">QR CODE</a>
+        </div>
+        <header class="header__review">
+            <img src="./assets/img/lego1 - Copy.jpg", alt="" id="img__bgreview">
+            <div>
+                <i class="header__review--arrow fa-solid fa-circle-arrow-left" onclick="prev()"></i>
+                <i class="header__review--arrow fa-solid fa-circle-arrow-right" onclick="next()"></i>
+            </div>
+            <!-- <div>
+                <i class="header__review--dots fa-solid fa-circle"></i>
+                <i class="header__review--dots fa-solid fa-circle"></i>
+                <i class="header__review--dots fa-solid fa-circle"></i>
+                <i class="header__review--dots fa-solid fa-circle"></i>
+                <i class="header__review--dots fa-solid fa-circle"></i>
+                <i class="header__review--dots fa-solid fa-circle"></i>
+            </div> -->
+            <script>
+                var arr_img=[
+                    // "./assets/img/lego1.jpg",
+                    // "./assets/img/zoro1400x600.jpg",
+                    // "./assets/img/transformer1440x600.jpg",
+                    // "./assets/img/shank1440x600.jpg",
+                    // "./assets/img/bgninja.jpg",
+                    // "./assets/img/naruto1440x600.jpg",
+                    "./assets/img/lego1 - Copy.jpg",
+                    "./assets/img/zoro1400x600 - Copy.jpg",
+                    "./assets/img/transformer1440x600.jpg",
+                    "./assets/img/Shank1440x600 - Copy.jpg",
+                    "./assets/img/bgninja.jpg",
+                    "./assets/img/narutocovien.jpg",
+                ]
+                var index = 0;
+                function next()
+                {
+                    index++;
+                    if(index >= arr_img.length)
+                        index = 0;
+                    var img__bgreview = document.getElementById("img__bgreview");
+                    img__bgreview.src = arr_img[index];
+                }
+                function prev()
+                {
+                    index--;
+                    if(index <= 0)
+                        index = 5;
+                    var img__bgreview = document.getElementById("img__bgreview");
+                    img__bgreview.src = arr_img[index];
+                }
+                Nextimg = function next_img()
+                {
+                    index++;
+                    if(index >= arr_img.length)
+                        index = 0;
+                    var img__bgreview = document.getElementById("img__bgreview");
+                    img__bgreview.src = arr_img[index];
+                }
+                setInterval(Nextimg,3000);
+            </script>
+        </header>
+        <ul class="header__review--title">
+            <li class="header__review--titleitem">NEW</li>
+            <li class="header__review--titleitem">ONEPIECE</li>
+            <li class="header__review--titleitem">MARVEL</li>
+            <li class="header__review--titleitem">NARUTO</li>
+            <li class="header__review--titleitem">TRANSFORMER</li>
+            <!-- <a href="emlongdaulung.com" target="_blank" class="header__review--titleitem">LONG</a> -->
+        </ul>
+    </header>
+<!-- Thân chính -->
+
+</body>
+</html>
