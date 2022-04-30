@@ -1,4 +1,4 @@
 # Web bán đồ mô hình nhân vật phim ảnh
-Đây là project của bùi hạ long và đỗ tú linh \
+Đây là project của Bùi Hạ Long và Đỗ Tú Linh \
 Đường link web https://lynhmo.github.io/webtest/ \
 👀
